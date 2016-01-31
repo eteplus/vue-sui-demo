@@ -1,5 +1,5 @@
 <template>
-<div class="content article">
+<div class="article">
   <v-bar type="nav">
     <h1 class="title" v-text="title"></h1>
     <v-button types="nav link"
@@ -137,6 +137,15 @@ export default {
 </script>
 
 <style>
+.article {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
 .article-tabs .buttons-tab {
   z-index: 10;
   margin-top:2.2rem;

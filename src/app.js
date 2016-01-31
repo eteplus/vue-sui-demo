@@ -9,7 +9,10 @@ import app from './main'
 Vue.use(VueRouter)
 
 const router = new VueRouter({
-  hashbang: true
+  hashbang: true,
+  history: false,
+  saveScrollPosition: true,
+  suppressTransitionError: true
 })
 
 routerConfig(router)

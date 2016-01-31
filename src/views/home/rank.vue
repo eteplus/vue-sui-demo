@@ -1,5 +1,5 @@
 <template>
-<div class="content rank">
+<div class="rank">
   <v-bar type="nav">
     <h1 class="title" v-text="title"></h1>
     <v-button types="nav link"
@@ -129,6 +129,15 @@ export default {
 </script>
 
 <style>
+.rank {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
 .rank .content-block-title {
   margin: .75rem .75rem .5rem;
 }
