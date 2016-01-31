@@ -1,7 +1,6 @@
 <template>
   <div class="page page-current">
-      <v-bar
-        type="tab"
+      <v-bar type="tab"
         v-if="isIndex">
         <v-tab-item :options="options"></v-tab-item>
       </v-bar>
