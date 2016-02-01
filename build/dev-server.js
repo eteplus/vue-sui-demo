@@ -6,6 +6,8 @@ var favicon = require('express-favicon')
 
 var app = express()
 var compiler = webpack(config)
+//设置资源目录
+app.use('/static', express.static(path.join(__dirname, '../src')))
 
 app.use(favicon(path.join(__dirname, '../favicon.ico')))
 // handle fallback for HTML5 history API

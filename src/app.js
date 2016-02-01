@@ -20,7 +20,7 @@ routerConfig(router)
 // Resource
 Vue.use(VueResource)
 
-Vue.http.options.root = '/api'
+Vue.http.options.root = '/static/data'
 Vue.http.options.emulateJSON = true
 
 // Directive

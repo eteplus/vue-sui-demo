@@ -1,0 +1,26 @@
+{
+  "code": 200,
+  "message": "获取成功",
+  "data": [
+    {
+      "tid": "1",
+      "title": "哈哈哈？你傻逼吗？",
+      "thumbnail": "adv.jpg",
+      "advertiser": "abc1",
+      "read_profit": "8",
+      "type": "0",
+      "status": "1",
+      "created": "1452139945"
+    },
+    {
+      "tid": "2",
+      "title": "看看你到底有多污？",
+      "thumbnail": "adv.jpg",
+      "advertiser": "abc2",
+      "status": "0",
+      "type": "1",
+      "read_profit": "5",
+      "created": "1452094126"
+    }
+  ]
+}

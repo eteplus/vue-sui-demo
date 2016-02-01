@@ -7,29 +7,40 @@
     :class-name="bar.className">
     <v-tab-item :options="bar"></v-tab-item>
   </v-bar>
-  <v-content type="block-title" style="margin: 0.9rem .75rem 0.9rem;">
-    <span style="float:left;margin-left: .2rem;">任务推荐</span>
-    <span style="float:right;margin-right: .2rem;">更多任务</span>
+    <v-content type="block-title" style="margin: 0 0 0.4rem;
+  -webkit-box-shadow: 0 .06rem 0 #ccc;box-shadow: 0 .06rem 0 #ccc;background-color: white;">
+    <btn style="float:left;margin: .4rem 0 .3rem .6rem;border:0;color:#6d6d72;padding:0">
+    任务推荐
+    </btn>
+    <btn types="link"
+      style="float:right;margin: .4rem .6rem .3rem 0;border:0;border:0;padding:0"
+      v-link="{path: '/article', replace: true}">
+      更多任务
+    </btn>
   </v-content>
   <div class="card-container">
-    <v-card-container v-for="task in tasks | orderBy 'id' -1">
+    <v-card-container v-for="task in tasks | orderBy 'created'"
+    :style="{backgroundColor: task.status === '1' ? 'white': 'rgb(224, 224, 224)' }">
       <card type="content">
-        <v-list type="media">
+        <list type="media">
             <li class="item-content">
-              <div class="item-media">
+              <item type="media">
                 <img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="44">
-              </div>
-              <div class="item-inner">
-                <div class="item-title-row">
-                  <div class="item-text">{{task.title}}</div>
-                </div>
-              </div>
+              </item>
+              <item type="inner">
+                <item type="title-row">
+                  <item type="text">{{task.title}}</item>
+                </item>
+              </item>
             </li>
-        </v-list>
+        </list>
       </card>
-      <card type="footer">
-        <span>赞助商：{{task.adv}}</span>
-        <span style="color:orange;font-weight: bold">{{task.point}}积分</span>
+      <card type="footer" >
+        <div style="color:gray">
+        赞助商：{{task.advertiser}}
+        <span style="margin-left: 1rem;padding: .1rem;border: 1px solid #929292;" :style="{color: task.status === '1' ? 'green': 'gray' }">{{task.status === '0' ? '结束' : '已领'}}</span>
+        </div>
+        <span :style="{color: task.status === '1' ? 'orange': 'gray',fontWeight:'bold'}">{{task.read_profit}} 积分</span>
       </card>
     </v-card-container>
   </div>
@@ -43,9 +54,11 @@ import VBar from '../components/Bar'
 import VTabItem from '../components/BarTabItem'
 import VLayer from '../components/PullToRefreshLayer'
 import VCardContainer from '../components/Card'
+import Btn from '../components/Button'
 import Card from '../components/CardItem'
 import VContent from '../components/Content'
-import VList from '../components/List'
+import List from '../components/List'
+import Item from '../components/ListItem'
 
 export default {
   ready () {
@@ -98,14 +111,7 @@ export default {
         activeClass: 'inactive',
         className: 'home-bar'
       },
-      tasks: [
-        {
-          id: 1,
-          title: '标题1',
-          adv: 'abc1',
-          point: 100
-        }
-      ]
+      tasks: []
     }
   },
   computed: {
@@ -138,12 +144,16 @@ export default {
     VCardContainer,
     Card,
     VContent,
-    VList
+    List,
+    Item,
+    Btn
   },
   route: {
     data ({to, next}) {
-      console.log('route home data')
-      next()
+      return this.$http.get('tasks.json')
+      .then(({data: {code, message, data}})=>{
+        this.tasks = data
+      })
     },
     activate ({to, next}) {
       console.log('route home activate')

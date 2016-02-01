@@ -30,7 +30,7 @@ export default {
       if (this.type === 'media') {
         typeCls = 'media-list'
       }
-      else if (this.type !== '') {
+      else if (this.type !== '' && this.type !== undefined) {
         typeCls = `${this.type}-block`
       }
       return cx({

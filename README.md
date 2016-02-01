@@ -1,8 +1,31 @@
 # vue-sui-demo
-[VUE](http://cn.vuejs.org/) 和 [SUI-Mobile](http://m.sui.taobao.org/) 结合的demo，禁用了SUI自带的路由，使用vue-router
+
+> 持续更新，如果对您有帮助，您可以点右上角 "Star" 支持一下 谢谢！ ^_^
+
+> 后面有空再写学习历程和遇到的问题
+
+---
+Vue很轻量，易定制，比较适合移动端，很喜欢Vue写组件的方式，
+所有用[VUE](http://cn.vuejs.org/) 和 [SUI-Mobile](http://m.sui.taobao.org/) 写了一个移动端demo，用来反馈vue的学习成果（禁用了SUI自带的路由，使用[Vue-router](https://github.com/vuejs/vue-router)）
+
+##### 技术栈
+
+> [vue](https://github.com/vuejs/vue)
+
+> [vue-router](https://github.com/vuejs/vue-router)
+
+> [vue-resource](https://github.com/vuejs/vue-resource)
+
+> [webpack](http://webpack.github.io/docs/)
+
+> [sui-mobile](http://m.sui.taobao.org/)
+
+> [es6-babel](https://babeljs.io/docs/learn-es2015/)
+
+---
 
 ### 安装
-项目地址：（`git clone`）
+项目地址：（使用`git clone`）
 
 ```shell
 git clone https://github.com/eteplus/vue-sui-demo.git
@@ -29,9 +52,9 @@ npm run main
 
 ```
 
-###开发
+### 开发
 
-###目录结构
+### 目录结构
 <pre>
 .
 ├── README.md           
@@ -45,6 +68,7 @@ npm run main
 ├── package.json             // 项目配置文件
 ├── src                      // 生产目录
 │   ├── assets               // css js 和图片资源
+│   ├── data                 // 数据文件
 │   ├── components           // 各种组件
 │   ├── views                // 各种页面
 │   ├── directives           // 各种指令
