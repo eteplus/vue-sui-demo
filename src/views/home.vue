@@ -19,7 +19,7 @@
     </btn>
   </v-content>
   <div class="card-container">
-    <v-card-container v-for="task in tasks | orderBy 'created'"
+    <v-card-container v-for="task in tasks | orderBy 'created' -1"
     :style="{backgroundColor: task.status === '1' ? 'white': 'rgb(224, 224, 224)' }">
       <card type="content">
         <list type="media">
@@ -30,6 +30,7 @@
               <item type="inner">
                 <item type="title-row">
                   <item type="text">{{task.title}}</item>
+                  <item type="text">{{task.created | date 2}}</item>
                 </item>
               </item>
             </li>

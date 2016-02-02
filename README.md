@@ -8,6 +8,7 @@
 Vue很轻量，易定制，比较适合移动端，很喜欢Vue写组件的方式，
 所有用[VUE](http://cn.vuejs.org/) 和 [SUI-Mobile](http://m.sui.taobao.org/) 写了一个移动端demo，用来反馈vue的学习成果（禁用了SUI自带的路由，使用[Vue-router](https://github.com/vuejs/vue-router)）
 
+
 ##### 技术栈
 
 > [vue](https://github.com/vuejs/vue)
@@ -21,6 +22,13 @@ Vue很轻量，易定制，比较适合移动端，很喜欢Vue写组件的方�
 > [sui-mobile](http://m.sui.taobao.org/)
 
 > [es6-babel](https://babeljs.io/docs/learn-es2015/)
+
+---
+### 截图
+
+---
+
+![print](./src/assets/print.png)
 
 ---
 
@@ -37,7 +45,7 @@ git clone https://github.com/eteplus/vue-sui-demo.git
 npm install -g cnpm --registry=http://registry.npm.taobao.org
 ```
 
-``` bash
+```bash
 # 安装依赖模块
 cnpm install
 
