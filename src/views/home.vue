@@ -1,4 +1,5 @@
 <template>
+<div>
 <div class="content home" action="refresh" distance="55" v-pull-to-refresh>
   <v-layer></v-layer>
   <slider :imgs="slider.imgs" :config="slider.config"></slider>
@@ -45,6 +46,7 @@
       </card>
     </v-card-container>
   </div>
+</div>
 </div>
 </template>
 
