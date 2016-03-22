@@ -1,16 +1,9 @@
 <template>
 <div class="tasks">
-  <v-bar type="nav">
-    <h1 class="title" v-text="title"></h1>
-    <v-button types="nav link"
-      class-name="pull-left"
-      v-link="{path: '/home', replace: true}">
-      <v-icon type="left"></v-icon>
-    </v-button>
-  </v-bar>
+  <v-nav :path="path" :title="title"></v-nav>
   <v-tabs type="tab" class-name="tasks-tabs">
     <v-tab name="all-tasks" title="所有任务" status="active"
-    action="refreshAll" distance="55" v-pull-to-refresh>
+    distance="55" v-pull-to-refresh="refreshAll">
       <v-layer></v-layer>
       <div class="allTasks">
           <v-card-container>
@@ -24,7 +17,7 @@
       </div>
     </v-tab>
     <v-tab name="my-tasks" title="我的任务"
-    action="refreshMine" distance="55" v-pull-to-refresh>
+    distance="55" v-pull-to-refresh="refreshMine">
       <v-layer></v-layer>
       <div class="myTasks">
           <v-card-container v-for="task in tasks | orderBy 'id' -1">
@@ -43,7 +36,7 @@
 
 <script>
 import $ from 'zepto'
-import VBar from '../../components/Bar'
+import VNav from '../../components/Nav'
 import VButton from '../../components/Button'
 import VIcon from '../../components/Iconfont'
 import VTabs from '../../components/Tabs'
@@ -53,11 +46,19 @@ import VCardContainer from '../../components/Card'
 import Card from '../../components/CardItem'
 
 export default {
+  route: {
+    data ({from, next}) {
+      if (from.path === '/user') {
+        this.path = from.path
+      }
+    }
+  },
   ready () {
     $.init()
   },
   data () {
     return {
+      path: '/home',
       title: '任务列表',
       tasks: [
         {
@@ -111,7 +112,7 @@ export default {
     }
   },
   components: {
-    VBar,
+    VNav,
     VButton,
     VIcon,
     VTabs,

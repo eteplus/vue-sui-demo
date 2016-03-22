@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 import routerConfig from './router'
 import pullToRefresh from './directives/pullToRefresh'
+import infiniteScroll from './directives/infiniteScroll'
 import * as filters from './filters'
 import app from './main'
 
@@ -11,7 +12,7 @@ Vue.use(VueRouter)
 
 const router = new VueRouter({
   hashbang: true,
-  history: false,
+  history: true,
   saveScrollPosition: true,
   suppressTransitionError: true
 })
@@ -26,6 +27,7 @@ Vue.http.options.emulateJSON = true
 
 // Directive
 Vue.directive('pullToRefresh', pullToRefresh)
+Vue.directive('infiniteScroll', infiniteScroll)
 
 // Filters
 Vue.filter('date', filters.dateFilter)

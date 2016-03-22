@@ -13,7 +13,7 @@
     <a href="#withdraw" class="tab-link button">积分提现</a>
   </div>
   <div class="tabs">
-    <div id="system" class="content tab active" data-ptr-distance="55" v-pull-to-refresh>
+    <div id="system" class="content tab active" distance="55" v-pull-to-refresh="refresh">
       <div class="pull-to-refresh-layer">
         <div class="preloader"></div>
         <div class="pull-to-refresh-arrow"></div>

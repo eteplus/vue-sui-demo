@@ -1,65 +1,90 @@
-import Home from './views/home'
-import Article from './views/article'
-import User from './views/user'
-import More from './views/more'
-import Feedback from './views/more/feedback'
-import About from './views/more/about'
-import Rank from './views/home/rank'
-import Tasks from './views/home/tasks'
-import Invite from './views/home/invite'
-import Profile from './views/user/profile'
-import Profit from './views/user/profit'
-import ProfitRecord from './views/user/profitRecord'
-import Withdraw from './views/user/withdraw'
 import $ from 'zepto'
 
 export default function (router) {
   router.map({
+    '*': {
+      component (resolve) {
+        require(['./views/welcome'], resolve)
+      }
+    },
+    '/': {
+      component (resolve) {
+        require(['./views/welcome'], resolve)
+      }
+    },
     '/home': {
-      component: Home
+      component (resolve) {
+        require(['./views/home'], resolve)
+      }
     },
-    '/home/rank': {
-      component: Rank
+    '/list': {
+      component (resolve) {
+        require(['./views/list'], resolve)
+      }
     },
-    '/home/tasks': {
-      component: Tasks
+    '/rank': {
+      component (resolve) {
+        require(['./views/rank'], resolve)
+      }
     },
-    '/home/invite': {
-      component: Invite
+    '/invite': {
+      component (resolve) {
+        require(['./views/invite'], resolve)
+      }
     },
-    '/article': {
-      component: Article
+    '/tasks': {
+      component (resolve) {
+        require(['./views/tasks'], resolve)
+      }
     },
     '/user': {
-      component: User
+      component (resolve) {
+        require(['./views/user'], resolve)
+      }
+    },
+    '/user/tasks': {
+      component (resolve) {
+        require(['./views/user/tasks'], resolve)
+      }
     },
     '/user/withdraw': {
-      component: Withdraw
+      component (resolve) {
+        require(['./views/user/withdraw'], resolve)
+      }
     },
     '/user/profile': {
-      component: Profile
+      component (resolve) {
+        require(['./views/user/profile'], resolve)
+      }
     },
     '/user/profit': {
-      component: Profit
+      component (resolve) {
+        require(['./views/user/profit'], resolve)
+      }
     },
     '/user/profit/record': {
-      component: ProfitRecord
+      component (resolve) {
+        require(['./views/user/profitRecord'], resolve)
+      }
     },
     '/more': {
-      component: More
+      component (resolve) {
+        require(['./views/more'], resolve)
+      }
     },
     '/more/feedback': {
-      component: Feedback
+      component (resolve) {
+        require(['./views/more/feedback'], resolve)
+      }
     },
     '/more/about': {
-      component: About
+      component (resolve) {
+        require(['./views/more/about'], resolve)
+      }
     }
   })
-  router.redirect({
-    '/': '/home'
-  })
 
-  router.beforeEach(function ({to, from, next}) {
+  router.beforeEach(({to, from, next}) => {
     let toPath = to.path
     let fromPath = from.path
     console.log('to: ' + toPath + ' from: ' + fromPath)
@@ -67,7 +92,8 @@ export default function (router) {
       router.app.isIndex = false
     }
     else {
-      router.app.isIndex = true
+      let depath = toPath === '/' || toPath === '/invite' || toPath === '/rank'
+      router.app.isIndex = depath ? 0 : 1
     }
     next()
   })

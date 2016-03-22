@@ -3,7 +3,7 @@
   <div class="banner">
     <div class="logo">
         <div class="logo_img">
-            <img src="../assets/logo.png" class="img-responsive" style="border:solid 1px #fff;border-radius: 50px;overflow:hidden;" width="64" height="64">
+            <img src="../assets/img/logo.png" class="img-responsive" style="border:solid 1px #fff;border-radius: 50px;overflow:hidden;" width="64" height="64">
             <div style="color:white;line-height: 1;">eteplus</div>
         </div>
         <div class="logo_txt">
@@ -18,7 +18,7 @@
   </div>
   <nav class="bar bar-tab user-tab">
     <a class="tab-item">
-      <span class="icon icon-star"></span>
+      <span class="icon icon-shouyi"></span>
       <span class="tab-label">已提现</span>
     </a>
     <a class="tab-item">
@@ -26,7 +26,7 @@
       <span class="tab-label">余额</span>
     </a>
     <a class="tab-item" v-link="{ path: '/user/withdraw', replace: true}">
-      <span class="icon icon-star"></span>
+      <span class="icon icon-shouyimingxi"></span>
       <span class="tab-label">我要提现</span>
     </a>
   </nav>
@@ -43,7 +43,7 @@
     </ul>
     <ul>
       <li>
-        <a class="item-content item-link"  v-link="{ path: '/home/tasks', replace: true}">
+        <a class="item-content item-link"  v-link="{ path: '/user/tasks', replace: true}">
           <div class="item-media"><span class="icon icon-star"></sapn></div>
           <div class="item-inner">
             <div class="item-title">我的任务</div>
@@ -73,7 +73,7 @@
     </ul>
     <ul>
       <li>
-        <a class="item-content item-link"  v-link="{ path: '/home/invite', replace: true}">
+        <a class="item-content item-link"  v-link="{ path: '/invite', replace: true}">
         <div class="item-media"><span class="icon icon-star"></sapn></div>
         <div class="item-inner">
           <div class="item-title">邀请好友</div>

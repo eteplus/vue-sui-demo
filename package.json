@@ -2,6 +2,7 @@
   "name": "vue-sui-demo",
   "description": "vue combine with sui-mobile",
   "author": "eteplus <eteplus@163.com>",
+  "version": "0.1.2",
   "scripts": {
     "main": "node index.js",
     "dev": "node build/dev-server.js",
@@ -12,12 +13,11 @@
     "url": "https://github.com/eteplus/vue-sui-demo.git"
   },
   "dependencies": {
-    "vue": "^1.0.15",
+    "vue": "^1.0.18",
     "vue-resource": "^0.6.1",
-    "vue-router": "^0.7.9"
+    "vue-router": "^0.7.11"
   },
   "devDependencies": {
-    "browser-sync-webpack-plugin": "^1.0.1",
     "babel-core": "^6.0.0",
     "babel-loader": "^6.0.0",
     "babel-plugin-transform-runtime": "^6.0.0",
@@ -25,6 +25,7 @@
     "babel-preset-stage-2": "^6.0.0",
     "babel-runtime": "^5.8.0",
     "browser-sync": "^2.11.1",
+    "browser-sync-webpack-plugin": "^1.0.1",
     "classnames": "^2.2.3",
     "connect-history-api-fallback": "^1.1.0",
     "css-loader": "^0.23.0",
@@ -43,7 +44,9 @@
     "json-loader": "^0.5.4",
     "less": "^2.6.0",
     "less-loader": "^2.2.2",
+    "node-sass": "^3.4.2",
     "rimraf": "^2.5.0",
+    "sass-loader": "^3.2.0",
     "url-loader": "^0.5.7",
     "vue-hot-reload-api": "^1.2.0",
     "vue-html-loader": "^1.0.0",

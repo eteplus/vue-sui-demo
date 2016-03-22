@@ -1,16 +1,9 @@
 <template>
 <div class="rank">
-  <v-bar type="nav">
-    <h1 class="title" v-text="title"></h1>
-    <v-button types="nav link"
-      class-name="pull-left"
-      v-link="{path: '/home', replace: true}">
-      <v-icon type="left"></v-icon>
-    </v-button>
-  </v-bar>
+  <v-nav :path="path" :title="title"></v-nav>
   <v-tabs type="tab" class-name="rank-tabs">
     <v-tab name="point" title="积分排行" status="active"
-    action="refreshPoint" distance="55" v-pull-to-refresh>
+    distance="55" v-pull-to-refresh="refreshPoint">
       <v-layer></v-layer>
       <v-content type="block-title">
         <span style="float:left;margin-left: .2rem;">积分排行榜</span>
@@ -32,7 +25,7 @@
       </v-list>
     </v-tab>
     <v-tab name="invite" title="邀请排行"
-    action="refreshInvite" distance="55" v-pull-to-refresh>
+    distance="55" v-pull-to-refresh="refreshInvite">
       <v-layer></v-layer>
       <v-content type="block-title">
         <span style="float:left;margin-left: .2rem;">邀请排行榜</span>
@@ -59,14 +52,15 @@
 
 <script>
 import $ from 'zepto'
-import VBar from '../../components/Bar'
-import VContent from '../../components/Content'
-import VButton from '../../components/Button'
-import VIcon from '../../components/Iconfont'
-import VList from '../../components/List'
-import VTabs from '../../components/Tabs'
-import VTab from '../../components/Tab'
-import VLayer from '../../components/PullToRefreshLayer'
+import VBar from '../components/Bar'
+import VNav from '../components/Nav'
+import VContent from '../components/Content'
+import VButton from '../components/Button'
+import VIcon from '../components/Iconfont'
+import VList from '../components/List'
+import VTabs from '../components/Tabs'
+import VTab from '../components/Tab'
+import VLayer from '../components/PullToRefreshLayer'
 
 export default {
   ready () {
@@ -75,6 +69,7 @@ export default {
   data () {
     return {
       title: '排行榜',
+      path: '/home',
       ranks: [
         {
           avatar: 'http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg',
@@ -117,6 +112,7 @@ export default {
   },
   components: {
     VBar,
+    VNav,
     VContent,
     VList,
     VButton,

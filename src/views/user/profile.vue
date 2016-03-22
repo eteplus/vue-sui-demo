@@ -10,7 +10,7 @@
     <ul>
       <li style="height: 3rem;">
         <div class="item-content" style="min-height: 3rem;">
-          <div class="item-media"><img src="../../assets/logo.png" height="auto" style='width: 2.2rem;'></div>
+          <div class="item-media"><img src="../../assets/img/logo.png" height="auto" style='width: 2.2rem;'></div>
           <div class="item-inner" style="min-height: 3rem;">
             <div class="item-title-row">
             </div>

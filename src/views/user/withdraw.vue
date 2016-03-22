@@ -1,20 +1,11 @@
 <template>
 <div class="withdraw">
-  <v-bar
-    type="nav">
-    <h1 class="title" v-text="title"></h1>
-    <v-button
-      class-name="pull-left"
-      types="nav link"
-      v-link="{path: '/user', replace: true}">
-      <v-icon type="left"></v-icon>
-    </v-button>
-  </v-bar>
+  <v-nav path="/user" :title="title"></v-nav>
   <v-tabs
     class-name="wd-tabs"
     type="tab">
     <v-tab name="tab1" title="Tab1" status="active"
-    action="refresh" distance="55" v-pull-to-refresh>
+    distance="55" v-pull-to-refresh="refresh" >
       <v-layer></v-layer>
       <v-card>
         <v-card-item type="header">卡头</v-card-item>
@@ -94,7 +85,7 @@
 <script>
 import VIcon from '../../components/Iconfont'
 import VButton from '../../components/Button'
-import VBar from '../../components/Bar'
+import VNav from '../../components/Nav'
 import VTabs from '../../components/Tabs'
 import VTab from '../../components/Tab'
 import VContent from '../../components/Content'
@@ -157,7 +148,7 @@ export default {
   components: {
     VIcon,
     VButton,
-    VBar,
+    VNav,
     VTabs,
     VTab,
     VContent,

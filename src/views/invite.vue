@@ -1,13 +1,6 @@
 <template>
 <div class="content invite">
-  <v-bar type="nav">
-    <h1 class="title" v-text="title"></h1>
-    <v-button types="nav link"
-      class-name="pull-left"
-      v-link="{path: '/home', replace: true}">
-      <v-icon type="left"></v-icon>
-    </v-button>
-  </v-bar>
+  <v-nav :path="path" :title="title"></v-nav>
   <v-list>
     <li class="item-content">
       <div class="item-inner">
@@ -20,12 +13,12 @@
     <div class="invite-card">
         <div class="invite-card-content">
             <div class="left_logo">
-              <img src="../../assets/logo.png" height="256" width="256" class="img_full" style="border-radius: 50px">
+              <img src="../assets/img/logo.png" height="256" width="256" class="img_full" style="border-radius: 50px">
             </div>
             <div class="center_code">
                 <span class="card_text">eteplus</span>
                 <div class="wx_code">
-                    <img src="../../assets/qrcode.jpg" height="795" width="795" class="img_full">
+                    <img src="../assets/img/qrcode.jpg" height="795" width="795" class="img_full">
                 </div>
                 <div class="code_down">
                     <span>长按保存发送好友</span>
@@ -40,29 +33,33 @@
 </template>
 
 <script>
-import VBar from '../../components/Bar'
-import VContent from '../../components/Content'
-import VButton from '../../components/Button'
-import VIcon from '../../components/Iconfont'
-import VList from '../../components/List'
+import VNav from '../components/Nav'
+import VContent from '../components/Content'
+import VList from '../components/List'
 
 export default {
+  route: {
+    data ({from, next}) {
+      if (from.path === '/user') {
+        this.path = from.path
+      }
+    }
+  },
   data () {
     return {
-      title: '邀请有奖'
+      title: '邀请有奖',
+      path: '/home'
     }
   },
   components: {
-    VBar,
+    VNav,
     VContent,
-    VList,
-    VButton,
-    VIcon
+    VList
   }
 }
 </script>
 
-<style>
+<style scoped>
 .invite .list-block {
   margin: 2.2rem 0 0 0;
 }

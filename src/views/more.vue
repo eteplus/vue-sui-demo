@@ -1,9 +1,9 @@
 <template>
 <div class="content more">
-  <header class="bar bar-nav" style="position: fixed">
-    <h1 class="title" v-text="title"></h1>
+  <header class="bar bar-nav">
+    <h1 class="title">更多</h1>
   </header>
-  <div class="list-block more-list">
+  <div class="list-block">
     <ul>
       <li class="item-content item-link">
         <div class="item-inner">
@@ -45,29 +45,18 @@
 </div>
 </template>
 
-<script>
-export default {
-  ready () {
-  },
-  data () {
-    return {
-      title: '更多'
-    }
-  }
-}
-</script>
-
-<style>
-.more-list {
+<style lang="sass" scoped>
+.list-block {
   margin: 2.75rem 0;
   height: 2.9rem;
-}
-.more-list ul {
-  height: 2.9rem;
-  /*box-shadow: 0 .01rem 0 .03rem rgba(0,0,0,.3);*/
-}
-.more-list .item-content {
-  margin-top: .7rem;
-  height: inherit;
+
+  ul {
+    height: 2.9rem;
+  }
+
+  .item-content {
+    margin-top: .7rem;
+    height: inherit;
+  }
 }
 </style>

@@ -10,9 +10,8 @@ module.exports = {
     filename: '[name].js'
   },
   externals: {
-      // require("jquery") is external and available
-      //  on the global var jQuery
-      'zepto': 'Zepto'
+    'zepto': 'Zepto',
+    'wx': 'jWeixin'
   },
   resolve: {
     extensions: ['', '.js', '.vue', '.less'],
@@ -21,7 +20,7 @@ module.exports = {
     }
   },
   resolveLoader: {
-    root: path.join(__dirname, 'node_modules'),
+    root: path.join(__dirname, 'node_modules')
   },
   module: {
     loaders: [
@@ -49,13 +48,18 @@ module.exports = {
           limit: 10000,
           name: '[name].[ext]?[hash]'
         }
+      },
+      {
+        test: /\.(eot|woff|ttf|svg)$/,
+        loader: 'url-loader?limit=30000&name=[name]-[hash].[ext]'
       }
     ]
   },
   vue: {
     loaders: {
       js: 'babel!eslint',
-      less: 'vue-style!css!less'
+      less: 'vue-style!css!less',
+      sass: 'vue-style!css!sass'
     }
   },
   eslint: {

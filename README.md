@@ -87,3 +87,6 @@ npm run main
 │   └── index.html           // 项目入口文件
 .
 </pre>
+
+### 更新记录
+参看 [CHANGELOG.md](./CHANGELOG.md)
