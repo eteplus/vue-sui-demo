@@ -7,7 +7,7 @@
     v-infinite-scroll="loadMore">
       <div class="list-block infinite-list">
         <ul>
-          <li class="item-content" v-for="item in items" track-by="id">
+          <li class="item-content" v-for="item in items" track-by="$index">
             <div class="item-media"><i class="icon icon-dianji"></i></div>
             <div class="item-inner">
               <div class="item-title">商品名称</div>
@@ -27,13 +27,15 @@ import $ from 'zepto'
 export default {
   route: {
     data ({to, next}) {
-      for (let i = 0 ; i < 15; i++) {
-        this.items.push({
-          id: i,
-          name: `demo${i + 1}`
-        })
-      }
       next()
+    }
+  },
+  ready () {
+    for (let i = 0 ; i < 15; i++) {
+      this.items.push({
+        id: i,
+        name: `demo${i + 1}`
+      })
     }
   },
   data () {
