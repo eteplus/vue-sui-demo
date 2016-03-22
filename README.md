@@ -28,7 +28,7 @@ Vue很轻量，易定制，比较适合移动端，很喜欢Vue写组件的方�
 
 ---
 
-![print](./src/assets/print.png)
+![print](./src/assets/img/print.png)
 
 ---
 
