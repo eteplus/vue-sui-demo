@@ -22,7 +22,7 @@ routerConfig(router)
 // Resource
 Vue.use(VueResource)
 
-Vue.http.options.root = '/static/data'
+Vue.http.options.root = '/data/'
 Vue.http.options.emulateJSON = true
 
 // Directive

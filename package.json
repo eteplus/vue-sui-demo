@@ -2,7 +2,7 @@
   "name": "vue-sui-demo",
   "description": "vue combine with sui-mobile",
   "author": "eteplus <eteplus@163.com>",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "scripts": {
     "main": "node index.js",
     "dev": "node build/dev-server.js",

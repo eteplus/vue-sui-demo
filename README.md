@@ -8,6 +8,9 @@
 Vue很轻量，易定制，比较适合移动端，很喜欢Vue写组件的方式，
 所有用[VUE](http://cn.vuejs.org/) 和 [SUI-Mobile](http://m.sui.taobao.org/) 写了一个移动端demo，用来反馈vue的学习成果（禁用了SUI自带的路由，使用[Vue-router](https://github.com/vuejs/vue-router)）
 
+##### 环境
+ 1. node v5.5.0
+ 2. npm 3.3.9
 
 ##### 技术栈
 
