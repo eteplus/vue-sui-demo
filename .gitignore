@@ -10,6 +10,7 @@ coverage
 .grunt
 .lock-wscript
 dist/
+.idea
 node_modules
 .npm
 .node_repl_history
