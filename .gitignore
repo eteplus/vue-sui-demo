@@ -1,0 +1,25 @@
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Dependency directory
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
+node_modules/
+
+# IDE config
+.idea
+
+# output
+output/
+output.tar.gz
+
+dist/
+
+build/
+
+runtime/
