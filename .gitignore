@@ -1,25 +1,16 @@
-# Logs
+.DS_Store
 logs
 *.log
-
-# Runtime data
+npm-debug.log*
 pids
 *.pid
 *.seed
-
-# Dependency directory
-# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
-node_modules/
-
-# IDE config
-.idea
-
-# output
-output/
-output.tar.gz
-
-dist/
-
+lib-cov
+coverage
+.grunt
+.lock-wscript
 build/
-
-runtime/
+.idea
+node_modules
+.npm
+.node_repl_history
