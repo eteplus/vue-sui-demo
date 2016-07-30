@@ -1,4 +1,5 @@
 # vue-sui-demo
+> 线上访问地址 http://eteplus.github.io/vue-sui-demo
 
 > 如果对您有帮助，您可以点右上角 "Star" 支持一下 谢谢！ ^_^
 
@@ -68,6 +69,8 @@ npm run build
 .
 ├── README.md           
 ├── dist                     // 项目build目录
+├── config                   // 环境变量和入口，出口配置
+├── static                   // 静态资源目录
 ├── build                    // 项目的配置文件目录
 │   ├── dev-server.js        // 开发的服务配置
 │   ├── webpack-dev-conf.js  // 开发的Webpack 配置文件

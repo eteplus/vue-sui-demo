@@ -2,9 +2,8 @@
 -------
 #### v0.1.5 ( 2016-7-30 ) ####
  - 目录重构
- - 修改README.md
- - 添加线上访问地址[vue-sui-demo](https://eteplus.github.io/vue-sui-demo)
- - 
+ - 添加线上访问地址 http://eteplus.github.io/vue-sui-demo
+ - 修改webpack配置
 
 ------
 
