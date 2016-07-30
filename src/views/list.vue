@@ -31,7 +31,7 @@ export default {
     }
   },
   ready () {
-    for (let i = 0 ; i < 15; i++) {
+    for (let i = 0; i < 15; i++) {
       this.items.push({
         id: i,
         name: `demo${i + 1}`

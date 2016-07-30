@@ -66,9 +66,9 @@ import $ from 'zepto'
 
 export default {
   route: {
-    data ({to, next}) {
+    data () {
       return this.$http.get('tasks.json')
-      .then(({data: {code, message, data}})=>{
+      .then(({data: {code, message, data}}) => {
         this.$set('tasks', data)
       })
     }

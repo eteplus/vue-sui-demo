@@ -38,7 +38,11 @@ export default {
     classes () {
       let typeCls = []
       if (this.types.length !== 0) {
-        typeCls = Array.from(this.types.split(' '), (type) => { return type !== '' ? `${this.prefixCls}-${type}` : type})
+        typeCls = Array.from(
+          this.types.split(' '),
+          (type) => {
+            return type !== '' ? `${this.prefixCls}-${type}` : type
+          })
         this.types = typeCls.join(' ')
       }
       return cx({
