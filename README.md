@@ -59,9 +59,6 @@ npm run dev
 # 发布代码
 npm run build
 
-# 发布后启动服务
-npm run main
-
 ```
 
 ### 开发
@@ -76,7 +73,6 @@ npm run main
 │   ├── webpack-dev-conf.js  // 开发的Webpack 配置文件
 │   ├── webpack-prod-conf.js // 生产的Webpack 配置文件
 │   ├── webpack-base-conf.js // 基本的Webpack 配置文件
-├── index.js                 // 项目发布后的启动文件
 ├── package.json             // 项目配置文件
 ├── src                      // 生产目录
 │   ├── assets               // css js 和图片资源
@@ -87,8 +83,8 @@ npm run main
 │   ├── filters.js           // 各种过滤器
 │   ├── router.js            // 路由配置
 │   └── main.vue             // 根组件
-│   └── app.js               // Webpack 预编译入口
-│   └── index.html           // 项目入口文件
+│   └── app.js               // Webpack 预编译入口         
+├── index.html               // 项目入口文件
 .
 </pre>
 

@@ -2,7 +2,7 @@
   "name": "vue-sui-demo",
   "description": "vue combine with sui-mobile",
   "author": "eteplus <eteplus@163.com>",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "repository": {
     "type": "git",
     "url": "https://github.com/eteplus/vue-sui-demo.git"

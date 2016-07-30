@@ -7,6 +7,7 @@ import infiniteScroll from './directives/infiniteScroll'
 import * as filters from './filters'
 import app from './main'
 
+
 // Router
 Vue.use(VueRouter)
 
@@ -22,7 +23,7 @@ routerConfig(router)
 // Resource
 Vue.use(VueResource)
 
-Vue.http.options.root = '/data/'
+Vue.http.options.root = process.env.NODE_ENV === 'development' ? 'src/assets/data' : '/static/data'
 Vue.http.options.emulateJSON = true
 
 // Directive
