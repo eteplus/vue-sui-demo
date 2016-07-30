@@ -2,7 +2,7 @@ import $ from 'zepto'
 import wx from 'wx'
 
 // 打印钩子函数运行的时间
-export let hookTime = (component, hookFnName) => {
+export const hookTime = (component, hookFnName) => {
   let date = new Date()
   let m = date.getMinutes()
   let s = date.getSeconds()
@@ -11,7 +11,7 @@ export let hookTime = (component, hookFnName) => {
 }
 
 // 加载动画
-export let loader = {
+export const loader = {
   show () {
     if ($('.ball-beat')[0]) {
       return
@@ -25,7 +25,7 @@ export let loader = {
 }
 
 // 微信分享配置
-export let wxShareConfig = ({title, desc, link, imgUrl}, success, fail, invite) => {
+export const wxShareConfig = ({title, desc, link, imgUrl}, success, fail) => {
   console.log('wxShare Config')
   wx.ready(() => {
     // “分享给朋友”

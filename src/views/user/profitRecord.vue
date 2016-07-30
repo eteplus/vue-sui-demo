@@ -45,8 +45,8 @@ export default {
   methods: {
     refresh () {
       setTimeout(function () {
-        var cardNumber = $(this.$el).find('.card').length + 1
-        var cardHTML = '<div class="card">' +
+        let cardNumber = $(this.$el).find('.card').length + 1
+        let cardHTML = '<div class="card">' +
           '<div class="card-header">card' + cardNumber + '</div>' +
           '<div class="card-content">' +
           '<div class="card-content-inner">' +

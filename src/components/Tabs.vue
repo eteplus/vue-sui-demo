@@ -43,7 +43,7 @@ export default {
     }
   },
   events: {
-    'setTabBtn' (data) {
+    setTabBtn (data) {
       this.tabBtn.push(data)
     }
   },

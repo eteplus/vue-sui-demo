@@ -79,8 +79,8 @@ export default {
       $.showIndicator()
       setTimeout(function () {
         console.log('refreshAll')
-        var cardNumber = $(this.$el).find('.card').length
-        var cardHTML = '<div class="card">' +
+        let cardNumber = $(this.$el).find('.card').length
+        let cardHTML = '<div class="card">' +
           '<div class="card-header">card' + cardNumber + '</div>' +
           '<div class="card-content">' +
           '<div class="card-content-inner">' +

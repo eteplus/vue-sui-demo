@@ -5,7 +5,7 @@ let format = (value) => {
 /**
  * 时间格式化
  */
-export let dateFilter = (time, type) => {
+export const dateFilter = (time, type) => {
   let date = new Date(time * 1000)
   let year = date.getFullYear()
   let month = date.getMonth() + 1
@@ -14,8 +14,7 @@ export let dateFilter = (time, type) => {
   let minutes = date.getMinutes()
   let second = date.getSeconds()
   let result
-  switch (type)
-  {
+  switch (type) {
     case 0: // 01-05
       result = `${format(month)}-${format(day)}`
       break

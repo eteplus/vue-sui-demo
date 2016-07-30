@@ -45,18 +45,16 @@
 </div>
 </template>
 
-<style lang="sass" scoped>
+<style scoped>
 .list-block {
   margin: 2.75rem 0;
   height: 2.9rem;
-
-  ul {
-    height: 2.9rem;
-  }
-
-  .item-content {
-    margin-top: .7rem;
-    height: inherit;
-  }
+}
+.list-block ul {
+  height: 2.9rem;
+}
+.list-block .item-content {
+  margin-top: .7rem;
+  height: inherit;
 }
 </style>
