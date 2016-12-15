@@ -14,3 +14,4 @@ dist/
 node_modules
 .npm
 .node_repl_history
+.idea
