@@ -67,7 +67,7 @@ npm run build
 ### 目录结构
 <pre>
 .
-├── README.md           
+├── README.md
 ├── dist                     // 项目build目录
 ├── config                   // 环境变量和入口，出口配置
 ├── static                   // 静态资源目录
@@ -86,10 +86,12 @@ npm run build
 │   ├── filters.js           // 各种过滤器
 │   ├── router.js            // 路由配置
 │   └── main.vue             // 根组件
-│   └── app.js               // Webpack 预编译入口         
+│   └── app.js               // Webpack 预编译入口
 ├── index.html               // 项目入口文件
 .
 </pre>
 
 ### 更新记录
 参看 [CHANGELOG.md](./CHANGELOG.md)
+
+good
